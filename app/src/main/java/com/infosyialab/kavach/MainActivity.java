@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                         return;
                     }
                     startService(new Intent(MainActivity.this, KavachService.class));
-                    btn_status.setText("KAVACH ACTIVATED");
+                    btn_status.setText("SAFEU ACTIVATED");
                     StopAppService = false;
                     AppServices appServices = new AppServices();
                     appServices.start();
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 } else {
                     stopService(new Intent(MainActivity.this, KavachService.class));
-                    btn_status.setText("KAVACH DEACTIVATE");
+                    btn_status.setText("SAFEU DEACTIVATE");
                     StopAppService = true;
                     if (audioBtnState == true) {
                         recordAudio.stopRecording();
