@@ -23,7 +23,7 @@ public class KavachService extends Service {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             createNotificationChannel();
             Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
-                    .setContentTitle("Kavach SOS")
+                    .setContentTitle("SafeU SOS")
                     .setContentText("This app is currently running in the background.")
                     .setSmallIcon(R.drawable.ic_icon_circle
                     )
