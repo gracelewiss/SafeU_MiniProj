@@ -4,8 +4,8 @@
     <string name="duration">Select Duration</string>
 
     <string name="about">SafeU is a SOS application, Once activated when you are in trouble will inform
-        your dear one\'s through text message with your current location It also starts voice recording in background as soon as application is activates
-        .\n\nUser can edit SOS message in local language edit and set three phone number of their preference</string>
+        your emergency contacts \'s through text message with your current location. It also starts voice recording in the background as soon as the application is activated
+        .\n\nThe user can edit the SOS message and set three phone numbers of their preference</string>
 
     <string-array name="duration">
         <item>3 minutes</item>
