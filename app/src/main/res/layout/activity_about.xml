@@ -63,11 +63,11 @@
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="47dp"
-        android:layout_margin="10dp"
-        android:text="Privacy Policy"
-        android:onClick="privacy"
+        android:layout_height="48dp"
         android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:onClick="privacy"
+        android:text="Privacy Policy"
         android:textColor="#ffffff" />
 
 </RelativeLayout>

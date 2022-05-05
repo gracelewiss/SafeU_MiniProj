@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Html;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -30,15 +31,15 @@ public class SplashScreen extends AppCompatActivity {
         } else {
 
             new AlertDialog.Builder(this)
-                    .setTitle("Attention")
+                    .setTitle(Html.fromHtml("<font color='#960018'>Attention</font>"))
                     .setMessage("This app use Location, SMS and Microphone to enable location sending feature and record the audio at the time of emergency, even when the app is closed.")
-                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    .setPositiveButton(Html.fromHtml("<font color='#960018'>OK</font>"), new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             requestPermission();
                         }
                     })
-                    .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    .setNegativeButton(Html.fromHtml("<font color='#960018'>Cancel</font>"), new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             finish();
@@ -69,8 +70,8 @@ public class SplashScreen extends AppCompatActivity {
                 && ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.RECORD_AUDIO)) {
 
             new AlertDialog.Builder(this)
-                    .setTitle("Permission Required")
-                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    .setTitle("Permissions Required")
+                    .setPositiveButton(Html.fromHtml("<font color='#960018'>OK</font>"), new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             ActivityCompat.requestPermissions(SplashScreen.this, new String[]{Manifest.permission.SEND_SMS,
@@ -78,7 +79,7 @@ public class SplashScreen extends AppCompatActivity {
                                     Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.RECORD_AUDIO}, 1);
                         }
                     })
-                    .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    .setNegativeButton(Html.fromHtml("<font color='#960018'>Cancel</font>"), new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             finish();

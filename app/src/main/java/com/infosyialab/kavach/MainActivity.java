@@ -39,8 +39,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //startService(new Intent(this, KavachService.class));
-
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
         if (location == null) {

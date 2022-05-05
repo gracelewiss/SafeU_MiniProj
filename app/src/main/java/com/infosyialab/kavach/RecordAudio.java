@@ -4,8 +4,6 @@ import android.content.Context;
 import android.media.MediaRecorder;
 import android.os.Environment;
 import android.widget.Toast;
-
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -25,7 +23,7 @@ public class RecordAudio {
     public void startRecording(){
 
         String timeStamp = new SimpleDateFormat("yyyy-dd-M--HH-mm-ss").format(new Date());
-        AudioSavePathInDevice = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Kavach Recording/AUDIO_"+timeStamp+".3gp";
+        AudioSavePathInDevice = Environment.getExternalStorageDirectory().getAbsolutePath() + "/SafeU Recording/AUDIO_"+timeStamp+".3gp";
         //check for saved folders
         recordingFiles = new File(AudioSavePathInDevice);
         if (!recordingFiles.getParentFile().exists()) {
